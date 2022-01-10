@@ -58,9 +58,7 @@ html(lang='ru-RU')
                   <rect y="23.8961" width="230" height="2.98701" fill="#3971FF" />
                   <rect y="31.3636" width="230" height="2.98701" fill="#3971FF" />
                 </svg>
-            p.header__address.
-              | г. Санкт-Петербург,
-              | наб. Pеки Карповки, 5 корпус П
+            p.header__address г. Санкт-Петербург, #[br] наб. Pеки Карповки, 5 корпус П
             .user-header
               .user-header__search
                 input.user-header__search-input(type='text' name='user-headerSearch' placeholder='Поиск по полке...')
@@ -126,67 +124,67 @@ html(lang='ru-RU')
                     fieldset.catalog-filter__fieldset
                       p.catalog-filter__legend Категория
                       div(class='catalog-filter__box')
-                        input.catalog-filter__checkbox(type='checkbox' id='fiction' name='fiction')
+                        input#fiction.catalog-filter__checkbox(type='checkbox' name='fiction')
                         label.catalog-filter__label(for='fiction') Художественная литература
                       div(class='catalog-filter__box')
-                        input.catalog-filter__checkbox(type='checkbox' id='for-children' name='for-children')
+                        input#for-children.catalog-filter__checkbox(type='checkbox' name='for-children')
                         label.catalog-filter__label(for='for-children') Книги для детей
                       div(class='catalog-filter__box')
-                        input.catalog-filter__checkbox(type='checkbox' id='education' name='education')
+                        input#education.catalog-filter__checkbox(type='checkbox' name='education')
                         label.catalog-filter__label(for='education') Образование
                       div(class='catalog-filter__box')
-                        input.catalog-filter__checkbox(type='checkbox' id='science-and-technology' name='science-and-technology')
+                        input#science-and-technology.catalog-filter__checkbox(type='checkbox' name='science-and-technology')
                         label.catalog-filter__label(for='science-and-technology') Наука и техника
                       div(class='catalog-filter__box')
-                        input.catalog-filter__checkbox(type='checkbox' id='society' name='society')
+                        input#society.catalog-filter__checkbox(type='checkbox' name='society')
                         label.catalog-filter__label(for='society') Общество
                       div(class='catalog-filter__box')
-                        input.catalog-filter__checkbox(type='checkbox' id='business-literature' name='business-literature')
+                        input#business-literature.catalog-filter__checkbox(type='checkbox' name='business-literature')
                         label.catalog-filter__label(for='business-literature') Деловая литература
                       div(class='catalog-filter__box')
-                        input.catalog-filter__checkbox(type='checkbox' id='health' name='health')
+                        input#health.catalog-filter__checkbox(type='checkbox' name='health')
                         label.catalog-filter__label(for='health') Здоровье
                       div(class='catalog-filter__box')
-                        input.catalog-filter__checkbox(type='checkbox' id='hobby' name='hobby')
+                        input#hobby.catalog-filter__checkbox(type='checkbox' name='hobby')
                         label.catalog-filter__label(for='hobby') Увлечения
                       div(class='catalog-filter__box')
-                        input.catalog-filter__checkbox(type='checkbox' id='psychology' name='psychology')
+                        input#psychology.catalog-filter__checkbox(type='checkbox' name='psychology')
                         label.catalog-filter__label(for='psychology') Психология
                       div(class='catalog-filter__box')
-                        input.catalog-filter__checkbox(type='checkbox' id='esoterics' name='esoterics')
+                        input#esoterics.catalog-filter__checkbox(type='checkbox' name='esoterics')
                         label.catalog-filter__label(for='esoterics') Эзотерика
                       div(class='catalog-filter__box')
-                        input.catalog-filter__checkbox(type='checkbox' id='philosophy' name='philosophy')
+                        input#philosophy.catalog-filter__checkbox(type='checkbox' name='philosophy')
                         label.catalog-filter__label(for='philosophy') Философия и религия
                       div(class='catalog-filter__box')
-                        input.catalog-filter__checkbox(type='checkbox' id='art' name='art')
+                        input#art.catalog-filter__checkbox(type='checkbox' name='art')
                         label.catalog-filter__label(for='art') Искусство
                     fieldset.catalog-filter__fieldset
                       p.catalog-filter__legend Статус
                       div(class='catalog-filter__box catalog-filter__box--radio')
-                        input.catalog-filter__radio(type='radio' id='bestsellers' name='status' value='bestsellers')
+                        input#bestsellers.catalog-filter__radio(type='radio' name='status' value='bestsellers')
                         label.catalog-filter__label(for='bestsellers') Хиты продаж
                       div(class='catalog-filter__box catalog-filter__box--radio')
-                        input.catalog-filter__radio(type='radio' id='news-books' name='status' value='news-books' checked)
+                        input#news-books.catalog-filter__radio(type='radio' name='status' value='news-books' checked)
                         label.catalog-filter__label(for='news-books') Новинки
                       div(class='catalog-filter__box catalog-filter__box--radio')
-                        input.catalog-filter__radio(type='radio' id='preorder' name='status' value='preorder')
+                        input#preorder.catalog-filter__radio(type='radio' name='status' value='preorder')
                         label.catalog-filter__label(for='preorder') Предзаказ
                     fieldset.catalog-filter__fieldset
                       p.catalog-filter__legend Наличие
                       div(class='catalog-filter__box catalog-filter__box--radio')
-                        input.catalog-filter__radio(type='radio' id='in-the-shop' name='availability' value='in-the-shop')
+                        input#in-the-shop.catalog-filter__radio(type='radio' name='availability' value='in-the-shop')
                         label.catalog-filter__label(for='in-the-shop') В магазине
                       div(class='catalog-filter__box catalog-filter__box--radio')
-                        input.catalog-filter__radio(type='radio' id='in-the-internet-shop' name='availability' value='in-the-internet-shop' checked)
+                        input#in-the-internet-shop.catalog-filter__radio(type='radio' name='availability' value='in-the-internet-shop' checked)
                         label.catalog-filter__label(for='in-the-internet-shop') В интернет-магазине
                       div(class='catalog-filter__box catalog-filter__box--radio')
-                        input.catalog-filter__radio(type='radio' id='under-the-order' name='availability' value='under-the-order')
+                        input#under-the-order.catalog-filter__radio(type='radio' name='availability' value='under-the-order')
                         label.catalog-filter__label(for='under-the-order') Под заказ
                 .catalog-books
                   .catalog-books__sort
                     label.catalog-books__sort-title(for='sort') Сортировать:
-                    select.catalog-books__select(size='1' id='sort')
+                    select#sort.catalog-books__select(size='1')
                       option.catalog-books__options по популярности
                       option.catalog-books__options по названию
                       option.catalog-books__options по новизне
@@ -429,9 +427,7 @@ html(lang='ru-RU')
                   h4.footer-nav__title Адрес
                   ul.footer-nav__sub-list
                     li.footer-nav__sub-item
-                      p.footer-nav__text
-                        | г. Санкт-Петербург,
-                        | наб. Pеки Карповки, 5 корпус П
+                      p.footer-nav__text г. Санкт-Петербург, #[br] наб. Pеки Карповки, 5 корпус П
                     li.footer-nav__sub-item
                       a.footer-nav__link(href="tel:+78005558628") +7 800 555 86 28
         p.footer__copyright © ООО «Интерактивные обучающие технологии», 2013−2021
