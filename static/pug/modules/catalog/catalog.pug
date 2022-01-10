@@ -1,0 +1,14 @@
+section.catalog
+  .container
+    h1.catalog__title Каталог книг
+    .catalog__wrapper
+      include ../catalog-filter/catalog-filter
+      .catalog-books
+        .catalog-books__sort
+          label.catalog-books__sort-title(for='sort') Сортировать:
+          select#sort.catalog-books__select(size='1')
+            option.catalog-books__options по популярности
+            option.catalog-books__options по названию
+            option.catalog-books__options по новизне
+        include ../books/books-catalog
+    include ../pagination/pagination
