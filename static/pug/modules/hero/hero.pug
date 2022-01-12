@@ -1,12 +1,23 @@
+- var slides = [
+  {
+    title: "Бестселлер для самых умных и продвинутых",
+    text: "Книга научит вас писать, читать, говорить по-новому. Авторы на конкретных примерах показывают, что такое хорошо и что такое плохо в информационных, рекламных, журналистских и публицистических текстах."
+    link: "#",
+    img: `${pathContentImg}hero-slider-1@1x.png`,
+    img2x: `${pathContentImg}hero-slider-1@2x.png 2x`,
+    imgAlt: "Картинка книга Пиши, сокращай",
+  }
+]
+
 section.hero
   .container
     div(class='hero__slider slider')
       ul.slider__list
         li.slider__item
-          h2.slider__title Бестселлер для самых умных и продвинутых
-          p.slider__text Книга научит вас писать, читать, говорить по-новому. Авторы на конкретных примерах показывают, что такое хорошо и что такое плохо в информационных, рекламных, журналистских и публицистических текстах.
-          a.slider__link(href='#') Подробнее
-          img.slider__img(src=`${pathContentImg}hero-slider-1@1x.png` srcset=`${pathContentImg}hero-slider-1@2x.png 2x` width='400' height='633' alt='Картинка книга Пиши, сокращай')
+          h2.slider__title #{slides[0].title}
+          p.slider__text #{slides[0].text}
+          a.slider__link(href=slides[0].link) Подробнее
+          img.slider__img(src=slides[0].img srcset=slides[0].img2x width='400' height='633' alt=slides[0].imgAlt)
       ul.slider__bullets
         li.slider__bullet
           button(class='slider__bullet-button slider__bullet-button--active')

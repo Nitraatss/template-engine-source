@@ -1,11 +1,50 @@
+- var books = [
+  {
+    img: `${pathContentImg}a-life-of-pleasure.jpg`,
+    title: "Жизнь в удовольствие",
+    author: "Палиенко А.",
+    description: "Автор собрал в этой книге все свои знания, актуальные в современном мире",
+    stars: "3.5",
+    link: "#",
+    pages: "208",
+  },
+  {
+    img: `${pathContentImg}book-kingdoms.jpg`,
+    title: "Королевство",
+    author: "Несбё Ю.",
+    description: "АВ норвежском городке, затерянном в горах, течет сонная, мирная жизнь",
+    stars: "4.8",
+    link: "#",
+    pages: "576",
+  },
+  {
+    img: `${pathContentImg}book-transhumanism.jpg`,
+    title: "Transhumanism inc.",
+    author: "Пелевин В.",
+    description: "В будущем богатые люди смогут отделить свой мозг от старящегося тела",
+    stars: "3.9",
+    link: "#",
+    pages: "608",
+  },
+  {
+    img: `${pathContentImg}book-feelings-of-shame.jpg`,
+    title: "Чувство стыда",
+    author: "Санд И.",
+    description: "то чувство сидит глубоко в нас, о нем не принято распространяться и обсуждать с близкими",
+    stars: "4.1",
+    link: "#",
+    pages: "170",
+  },
+]
+
 ul.books
   li.books__item
     .books__inner
-      img.books__img(src=`${pathContentImg}a-life-of-pleasure.jpg` alt='Фото книги - "Жизнь в удовольствие"' width='275' height='320')
+      img.books__img(src=books[0].src alt=`Фото книги - "${books[0].title}"` width='275' height='320')
       .books__box
-        p.books__author Палиенко А.
-        h3.books__name Жизнь в удовольствие
-        p.books__description Автор собрал в этой книге все свои знания, актуальные в современном мире
+        p.books__author #{books[0].author}
+        h3.books__name #{books[0].title}
+        p.books__description #{books[0].description}
         p.books__stars
           .
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,17 +54,17 @@ ul.books
                 stroke="white"
               />
             </svg>
-          span.books__star 3.5
+          span.books__star #{books[0].stars}
         .books__wrapper
-          a.books__link(href='#') Подробнее 
-          span.books__pages 208 страниц
+          a.books__link(href=books[0].link) Подробнее 
+          span.books__pages #{books[0].pages}
   li.books__item
     .books__inner
-      img.books__img(src=`${pathContentImg}book-kingdoms.jpg` alt='Фото книги - "Королевство"' width='275' height='320')
+      img.books__img(src=books[1].src alt=`Фото книги - "${books[1].title}"` width='275' height='320')
       .books__box
-        p.books__author Несбё Ю.
-        h3.books__name Королевство
-        p.books__description АВ норвежском городке, затерянном в горах, течет сонная, мирная жизнь
+        p.books__author #{books[1].author}
+        h3.books__name #{books[1].title}
+        p.books__description #{books[1].description}
         p.books__stars
           .
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,17 +74,17 @@ ul.books
                 stroke="white"
               />
             </svg>
-          span.books__star 4.8
+          span.books__star #{books[1].stars}
         .books__wrapper
-          a.books__link(href='#') Подробнее 
-          span.books__pages 576 страниц
+          a.books__link(href=books[1].link) Подробнее 
+          span.books__pages #{books[1].pages}
   li.books__item
     .books__inner
-      img.books__img(src=`${pathContentImg}book-transhumanism.jpg` alt='Фото книги - "Transhumanism inc."' width='275' height='320')
+      img.books__img(src=books[2].src alt=`Фото книги - "${books[2].title}"` width='275' height='320')
       .books__box
-        p.books__author Пелевин В.
-        h3.books__name Transhumanism inc.
-        p.books__description В будущем богатые люди смогут отделить свой мозг от старящегося тела
+        p.books__author #{books[2].author}
+        h3.books__name #{books[2].title}
+        p.books__description #{books[2].description}
         p.books__stars
           .
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,17 +94,17 @@ ul.books
                 stroke="white"
               />
             </svg>
-          span.books__star 3.9
+          span.books__star #{books[2].stars}
         .books__wrapper
-          a.books__link(href='#') Подробнее 
-          span.books__pages 608 страниц
+          a.books__link(href=books[2].link) Подробнее 
+          span.books__pages #{books[2].pages}
   li.books__item
     .books__inner
-      img.books__img(src=`${pathContentImg}book-feelings-of-shame.jpg` alt='Фото книги - "Чувство стыда"' width='275' height='320')
+      img.books__img(src=books[3].src alt=`Фото книги - "${books[3].title}"` width='275' height='320')
       .books__box
-        p.books__author Санд И.
-        h3.books__name Чувство стыда
-        p.books__description Это чувство сидит глубоко в нас, о нем не принято распространяться и обсуждать с близкими
+        p.books__author #{books[3].author}
+        h3.books__name #{books[3].title}
+        p.books__description #{books[3].description}
         p.books__stars
           .
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +114,7 @@ ul.books
                 stroke="white"
               />
             </svg>
-          span.books__star 4.1
+          span.books__star #{books[3].stars}
         .books__wrapper
-          a.books__link(href='#') Подробнее 
-          span.books__pages 170 страниц
+          a.books__link(href=books[3].link) Подробнее 
+          span.books__pages #{books[3].pages}
