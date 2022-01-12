@@ -1,9 +1,13 @@
 extends layout/layout
 
+block append variables
+  - var title = "Каталог книг"
+  - var pageClass = "book-page"
+
 block header
   include modules/header/header-authed.pug
 block content
-  main.book-page
+  main(class=pageClass)
     include modules/breadcrumbs/breadcrumbs-book
     include modules/book/book
     include modules/reviews/reviews-book

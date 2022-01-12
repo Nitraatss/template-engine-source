@@ -1,9 +1,13 @@
 extends layout/layout
 
+block append variables
+  - var title = "Главная страница"
+  - var pageClass = "index-page"
+
 block header
   include modules/header/header
 block content
-  main.index-page
+  main(class=pageClass)
     h1.visually-hidden Магазин по продаже книг "По полочкам"
     include modules/hero/hero
     include modules/new-books/new-books
