@@ -13,21 +13,17 @@ section.hero
   .container
     div(class='hero__slider slider')
       ul.slider__list
-        li.slider__item
-          h2.slider__title #{slides[0].title}
-          p.slider__text #{slides[0].text}
-          a.slider__link(href=slides[0].link) Подробнее
-          img.slider__img(src=slides[0].img srcset=slides[0].img2x width='400' height='633' alt=slides[0].imgAlt)
+        each slide in slides
+          li.slider__item
+            h2.slider__title #{slide.title}
+            p.slider__text #{slide.text}
+            a.slider__link(href=slide.link) Подробнее
+            img.slider__img(src=slide.img srcset=slide.img2x width='400' height='633' alt=slide.imgAlt)
       ul.slider__bullets
-        li.slider__bullet
-          button(class='slider__bullet-button slider__bullet-button--active')
-            span.visually-hidden Первый слайд
-        li.slider__bullet
-          button(class='slider__bullet-button')
-            span.visually-hidden Второй слайд
-        li.slider__bullet
-          button(class='slider__bullet-button')
-            span.visually-hidden Третий слайд
+        each slide, index in slides
+          li.slider__bullet
+            button(class='slider__bullet-button slider__bullet-button--active')
+              span.visually-hidden= `${index + 1} слайд`
       ul.slider__arrows
         li.slider__arrow
           button(class='slider__arrow-button slider__arrow-button--prev')
