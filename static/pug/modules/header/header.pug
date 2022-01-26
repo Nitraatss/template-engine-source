@@ -82,9 +82,9 @@ header.header
       .nav__content
         ul.nav__list
           li.nav__item
-            a.nav__link(class=pageClass === "index-page" ? "nav__link--active" : false ,href="index.html") Главная
+            a.nav__link(class=pageClass === "index-page" ? "nav__link--active" : false, href=pageClass !== "index-page" ? "index.html" : false) Главная
           li.nav__item
-            a.nav__link(class=pageClass === "catalog-page" ? "nav__link--active" : false href='catalog.html') Каталог книг
+            a.nav__link(class=pageClass === "catalog-page" ? "nav__link--active" : false, href=pageClass !== "catalog-page" ? "catalog.html" : false) Каталог книг
           li.nav__item
             a.nav__link(href='#') Оплата и доставка
           li.nav__item

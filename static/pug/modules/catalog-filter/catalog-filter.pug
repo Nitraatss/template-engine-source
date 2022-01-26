@@ -1,62 +1,36 @@
+mixin checkBoxfilter(filterId, label)
+  div.catalog-filter__box
+    input.catalog-filter__checkbox(id=filterId, type="chekbox", name=filterId)
+    label.catalog-filter__label(for=filterId) #{label}
+
+mixin radiofilter(filterId, filterName, label, isChecked)
+  div(class='catalog-filter__box catalog-filter__box--radio')
+    input.catalog-filter__radio(id=filterId, type='radio' name=filterName value=filterId checked=isChecked)
+    label.catalog-filter__label(for=filterId) #{label}
+
 .catalog-filter
   form.catalog-filter__form
     fieldset.catalog-filter__fieldset
       p.catalog-filter__legend Категория
-      div(class='catalog-filter__box')
-        input#fiction.catalog-filter__checkbox(type='checkbox' name='fiction')
-        label.catalog-filter__label(for='fiction') Художественная литература
-      div(class='catalog-filter__box')
-        input#for-children.catalog-filter__checkbox(type='checkbox' name='for-children')
-        label.catalog-filter__label(for='for-children') Книги для детей
-      div(class='catalog-filter__box')
-        input#education.catalog-filter__checkbox(type='checkbox' name='education')
-        label.catalog-filter__label(for='education') Образование
-      div(class='catalog-filter__box')
-        input#science-and-technology.catalog-filter__checkbox(type='checkbox' name='science-and-technology')
-        label.catalog-filter__label(for='science-and-technology') Наука и техника
-      div(class='catalog-filter__box')
-        input#society.catalog-filter__checkbox(type='checkbox' name='society')
-        label.catalog-filter__label(for='society') Общество
-      div(class='catalog-filter__box')
-        input#business-literature.catalog-filter__checkbox(type='checkbox' name='business-literature')
-        label.catalog-filter__label(for='business-literature') Деловая литература
-      div(class='catalog-filter__box')
-        input#health.catalog-filter__checkbox(type='checkbox' name='health')
-        label.catalog-filter__label(for='health') Здоровье
-      div(class='catalog-filter__box')
-        input#hobby.catalog-filter__checkbox(type='checkbox' name='hobby')
-        label.catalog-filter__label(for='hobby') Увлечения
-      div(class='catalog-filter__box')
-        input#psychology.catalog-filter__checkbox(type='checkbox' name='psychology')
-        label.catalog-filter__label(for='psychology') Психология
-      div(class='catalog-filter__box')
-        input#esoterics.catalog-filter__checkbox(type='checkbox' name='esoterics')
-        label.catalog-filter__label(for='esoterics') Эзотерика
-      div(class='catalog-filter__box')
-        input#philosophy.catalog-filter__checkbox(type='checkbox' name='philosophy')
-        label.catalog-filter__label(for='philosophy') Философия и религия
-      div(class='catalog-filter__box')
-        input#art.catalog-filter__checkbox(type='checkbox' name='art')
-        label.catalog-filter__label(for='art') Искусство
+      +checkBoxfilter('fiction', 'Художественная литература')
+      +checkBoxfilter('for-children', 'Книги для детей')
+      +checkBoxfilter('education', 'Образование')
+      +checkBoxfilter('science-and-technology', 'Наука и техника')
+      +checkBoxfilter('society', 'Деловая литература')
+      +checkBoxfilter('business-literature', 'Общество')
+      +checkBoxfilter('health', 'Здоровье')
+      +checkBoxfilter('hobby', 'Увлечения')
+      +checkBoxfilter('psychology', 'Психология')
+      +checkBoxfilter('esoterics', 'Эзотерика')
+      +checkBoxfilter('philosophy', 'Философия и религия')
+      +checkBoxfilter('art', 'Искусство')
     fieldset.catalog-filter__fieldset
       p.catalog-filter__legend Статус
-      div(class='catalog-filter__box catalog-filter__box--radio')
-        input#bestsellers.catalog-filter__radio(type='radio' name='status' value='bestsellers')
-        label.catalog-filter__label(for='bestsellers') Хиты продаж
-      div(class='catalog-filter__box catalog-filter__box--radio')
-        input#news-books.catalog-filter__radio(type='radio' name='status' value='news-books' checked)
-        label.catalog-filter__label(for='news-books') Новинки
-      div(class='catalog-filter__box catalog-filter__box--radio')
-        input#preorder.catalog-filter__radio(type='radio' name='status' value='preorder')
-        label.catalog-filter__label(for='preorder') Предзаказ
+      +radiofilter('bestsellers', 'status', 'Хиты продаж', false)
+      +radiofilter('news-books', 'status', 'Новинки', true)
+      +radiofilter('preorder', 'status', 'Предзаказ', false)
     fieldset.catalog-filter__fieldset
       p.catalog-filter__legend Наличие
-      div(class='catalog-filter__box catalog-filter__box--radio')
-        input#in-the-shop.catalog-filter__radio(type='radio' name='availability' value='in-the-shop')
-        label.catalog-filter__label(for='in-the-shop') В магазине
-      div(class='catalog-filter__box catalog-filter__box--radio')
-        input#in-the-internet-shop.catalog-filter__radio(type='radio' name='availability' value='in-the-internet-shop' checked)
-        label.catalog-filter__label(for='in-the-internet-shop') В интернет-магазине
-      div(class='catalog-filter__box catalog-filter__box--radio')
-        input#under-the-order.catalog-filter__radio(type='radio' name='availability' value='under-the-order')
-        label.catalog-filter__label(for='under-the-order') Под заказ
+      +radiofilter('in-the-shop', 'availability', 'В магазине', false)
+      +radiofilter('in-the-internet-shop', 'availability', 'В интернет-магазине', false)
+      +radiofilter('under-the-order', 'availability', 'Под заказ', false)

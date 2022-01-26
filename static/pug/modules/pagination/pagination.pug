@@ -1,10 +1,10 @@
-div(class="catalog__pagination pagination")
+mixin paginationItem(number, active)
+  li.pagination__item
+    a.pagination__link(class=active === true ? "pagination__link--active": false, href=active === true ? false : "#", title=active === true ? `Текущая страница ${number}` : `Перейти на страницу № ${number}`) #{number}
+
+div.catalog__pagination.pagination
   ul.pagination__list
-    li.pagination__item
-      a(class='pagination__link pagination__link--active' title='Текущая страница 1') 1
-    li.pagination__item
-      a(class='pagination__link' href='#' title='Перейти на страницу № 2') 2
-    li.pagination__item
-      a(class='pagination__link' href='#' title='Перейти на страницу № 3') 3
-    li.pagination__item
-      a(class='pagination__link' href='#' title='Перейти на страницу № 4') 4
+    +paginationItem("1", true)
+    +paginationItem("2", false)
+    +paginationItem("3", false)
+    +paginationItem("4", false)

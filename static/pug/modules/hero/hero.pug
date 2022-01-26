@@ -7,9 +7,14 @@
       img: `${pathContentImg}hero-slider-1@1x.png`,
       img2x: `${pathContentImg}hero-slider-1@2x.png 2x`,
       imgAlt: "Картинка книга Пиши, сокращай",
+      active: true,
     }
   ]
 
+mixin bullet(number, isActive)
+  li.slider__bullet
+    button.slider__bullet-button(class=isActive === true ? "slider__bullet-button--active" : false)
+      span.visually-hidden= `${index + 1} слайд`
 
 section.hero
   .container
@@ -23,9 +28,7 @@ section.hero
             img.slider__img(src=slide.img srcset=slide.img2x width='400' height='633' alt=slide.imgAlt)
       ul.slider__bullets
         each slide, index in slides
-          li.slider__bullet
-            button(class='slider__bullet-button slider__bullet-button--active')
-              span.visually-hidden= `${index + 1} слайд`
+          +bullet(index, slide.active)
       ul.slider__arrows
         li.slider__arrow
           button(class='slider__arrow-button slider__arrow-button--prev')
